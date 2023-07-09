@@ -1,0 +1,63 @@
+.ide-icon {
+    font-family: var(--font-family-icon);
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    user-select: none;
+    color: #ffffff;
+}
+
+.ide-icon.icon-20 {
+    height: 20px;
+    width: 20px;
+    font-size: 16px;
+}
+
+.ide-icon.icon-25 {
+    height: 25px;
+    width: 25px;
+    font-size: 18px;
+}
+
+.ide-icon.icon-30 {
+    height: 30px;
+    width: 30px;
+    font-size: 22px;
+}
+
+
+.ide-icon.icon-40 {
+    height: 40px;
+    width: 40px;
+}
+
+
+.ide-icon.icon-hover-rounded:hover {
+    cursor: auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.ide-icon.icon-hover:hover {
+    cursor: auto;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.ide-icon.icon-hover-red:hover {
+    cursor: auto;
+    background: rgb(255, 0, 0);
+}

@@ -7,23 +7,183 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello world</title>
     <!-- Style -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,100,0,0" />
     <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/icon.css">
+    <link rel="stylesheet" href="style/logo.css">
+    <link rel="stylesheet" href="style/ide/ide.css">
+    <link rel="stylesheet" href="style/ide/side.css">
+    <link rel="stylesheet" href="style/ide/code.css">
+    <link rel="stylesheet" href="style/ide/terminal.css">
+    <link rel="stylesheet" href="style/ide/modal.css">
+    <link rel="stylesheet" href="style/prism/prism.css">
+    <link rel="stylesheet" href="style/prism/prismCodeStyle.css">
+
 </head>
 <body>
-    <div class="wrapper">
-        <main class="page">
-            <div class="closed">
-                <div class="closed__text">
-                    <p>сoming soon</p>
+    <main class="ide flex-column">
+
+        <div class="ide-header" id="ide-header">
+            <div class="header-left flex-row">
+                <div class="logo"><div></div></div>
+                <span class="ide-icon icon-40 icon-hover dummy">reorder</span>
+            </div>
+            <div class="header-right flex-row">
+                <div class="header-actions">
+                    <div class="dummy">Current File <span class="ide-icon icon-20">expand_more</span></div>
+                    <div class="ide-icon dummy">play_arrow</div>
+                    <div class="ide-icon dummy">bug_report</div>
+                    <div class="ide-icon dummy">more_vert</div>
+                </div>
+                <div class="flex-row">
+                    <span class="ide-icon icon-40 icon-hover dummy">person_add</span>
+                    <span class="ide-icon icon-40 icon-hover dummy">search</span>
+                    <span class="ide-icon icon-40 icon-hover dummy">settings</span>
+                    <span class="ide-icon icon-40 icon-hover dummy">horizontal_rule</span>
+                    <span class="ide-icon icon-40 icon-hover dummy">stop</span>
+                    <span class="ide-icon icon-40 icon-hover-red dummy">close</span>
                 </div>
             </div>
-            <div class="copyright">
-                DarkDesign
+        </div>
+
+        <div class="ide-body flex-row flex-1">
+            <div class="ide-panel-left">
+                <div class="flex-column flex-gap-8">
+                    <div class="flex-center">
+                        <span class="ide-icon icon-hover-rounded dummy">folder</span>
+                    </div>
+                    <div class="flex-center">
+                        <span class="ide-icon icon-hover-rounded dummy">widgets</span>
+                    </div>
+                    <div class="flex-center">
+                        <span class="ide-icon icon-hover-rounded dummy">more_horiz</span>
+                    </div>
+                </div>
+                <div class="flex-column flex-gap-8">
+                    <div class="flex-center">
+                        <span class="ide-icon icon-hover-rounded dummy">terminal</span>
+                    </div>
+                    <div class="flex-center">
+                        <span class="ide-icon icon-hover-rounded dummy">info</span>
+                    </div>
+                </div>
             </div>
-        </main>
+            <div class="ide-workspace flex-column flex-1">
+                <div class="ide-workspace-wrapper flex-row flex-1">
+                    <div class="ide-side flex-column">
+                        <div class="side-header">Project <span class="ide-icon icon-20 dummy">expand_more</span></div>
+                        <div class="side-body flex-1">
+                            <pre><code class="language-treeview" id="menu-body">
+                                portfolio/
+                                    core/
+                                        _types/
+                                            KnowledgeAssessment.ts
+                                            Sex.ts
+                                            index.ts
+                                        index.ts
+                                    classes/
+                                        developer/
+                                            interfaces/
+                                                IPersonalInformation.ts
+                                                ICompilation.ts
+                                                ISocialNetwork.ts
+                                                IWorkExperience.ts
+                                                index.ts
+                                            Developer.ts
+                                        project/
+                                            Project.ts
+                                        index.ts
+                                    main.ts
+
+                                External Libraries/
+                                Scratches and Consoles/
+                            </code>
+                        </code></pre>
+                        </div>
+                    </div>
+                    <div class="code flex-column flex-1">
+                        <div class="code-header flex-row" id="code-header"></div>
+                        <div class="code-body flex-1">
+                            <div class="code-text">
+                                <div class="code-divider"></div>
+                                <pre id="code-numbers" class="line-numbers"><code class="language-ts" id="code-body"></code></pre>
+                            </div>
+                        </div>
+                        <div class="code-footer">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="ide-terminal flex-column">
+                    <div class="terminal-header flex-gap-8">
+                        <span class="terminal-title">Terminal</span>
+                        <div class="terminal-item">
+                            Local
+                            <span class="terminal-item-close dummy">close</span>
+                        </div>
+
+                        <span class="ide-icon icon-30 icon-hover-rounded dummy">add</span>
+                        <span class="ide-icon icon-30 icon-hover-rounded dummy">expand_more</span>
+                    </div>
+                    <div class="terminal-body flex-1">
+                        <div>
+                            <div><span class="user">trukhin@DESKTOP-4DSU4DS</span> <span class="system">MINGW64</span> <span class="path">~/frontend/portfolio</span> <span class="git">(main)</span></div>
+                            <div>$ npm install</div>
+                            <div class="space"></div>
+                            <div>Installing packages. This might take a couple of minutes.</div>
+                            <div>Installing <span class="system">all dependencies</span> from the <span class="system">black hole</span>, fasten your seat belts.</div>
+                            <div class="space"></div>
+                            <div id="terminal-loader"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ide-panel-right">
+                <div class="flex-column flex-gap-8">
+                    <div class="flex-center">
+                        <span class="ide-icon icon-hover-rounded dummy">notifications_none</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ide-footer">
+            <div class="footer-left"><span class="ide-icon icon-20">stop</span> portfolio</div>
+            <div class="footer-right">
+                <div class="footer-blame flex-column flex-center dummy">Blame: Trukhin 07.07.2023 12:36</div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="modal-wrapper deactivate" id="modal">
+        <div class="modal">
+            <div class="modal-close">
+                <span id="modal-close" class="ide-icon icon-25 icon-hover-rounded">close</span>
+            </div>
+            <div class="modal-body flex-row flex-gap-8">
+                <div>
+                    <span class="ide-icon icon-40">help</span>
+                </div>
+                <div>
+                    <div class="modal-title" id="modal-title">
+                        Test title ?!
+                    </div>
+                    <div class="modal-text" id="modal-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ducimus fuga in laborum maiores placeat qui.
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
+
+
     <!-- Scripts -->
-    <script src="/scripts/script.js"></script>
+    <script src="scripts/prism/prism.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/terminal.js"></script>
+    <script src="scripts/modal.js"></script>
 </body>
 </html>

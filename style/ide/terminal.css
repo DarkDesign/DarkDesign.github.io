@@ -1,0 +1,75 @@
+.terminal-header {
+    height: 40px;
+    background: var(--primary-bg);
+    display: flex;
+    align-items: center;
+}
+
+.terminal-title {
+    font-size: 13px;
+    color: var(--font-accent);
+    padding: 0 10px;
+}
+
+.terminal-item {
+    display: flex;
+    height: 33px;
+    align-items: center;
+    font-size: 12px;
+    padding: 4px 8px 0 12px;
+    cursor:default;
+    border-bottom: 3px solid #5a5d63;
+}
+
+.terminal-item-close {
+    height: 14px;
+    width: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    font-family: var(--font-family-icon);
+    color: #ffffff;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+.terminal-item-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.terminal-body{
+    background: var(--secondary-bg);
+    font-size: 13px;
+    padding: 5px;
+    overflow: auto;
+}
+
+.terminal-body .terminal-loader-text > .user,
+.terminal-body div > .user {
+    color: #5c952c;
+}
+
+.terminal-body .terminal-loader-text > .system,
+.terminal-body div > .system {
+    color: #a670be;
+}
+
+.terminal-body .terminal-loader-text > .path,
+.terminal-body div > .path {
+    color: #9f651a;
+}
+
+.terminal-body .terminal-loader-text > .git,
+.terminal-body div > .git {
+    color: #0b8c96;
+}
+
+.terminal-body .space {
+    height: 12px;
+}
+
+.terminal-body .terminal-loader {
+    letter-spacing: -1px;
+}

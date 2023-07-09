@@ -1,0 +1,128 @@
+.ide {
+    height: 100%;
+    width: 100%;
+    color: var(--font-primary);
+}
+
+.ide-header {
+    height: 40px;
+    background: var(--primary-bg);
+    border-bottom: 2px solid var(--secondary-bg);
+    display: flex;
+}
+
+.ide-header.deactivate {
+    background: #3c3f41;
+}
+
+.ide-header > div {
+    width: 50%;
+}
+
+.header-left {
+
+}
+
+.header-right {
+    justify-content: space-between;
+}
+
+.header-actions {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background: #366acd;
+    font-size: 11px;
+    color: var(--font-accent);
+    padding-left: 15px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.header-actions > div:nth-child(1) {
+    padding-right: 15px;
+    border-right: 1px solid var(--font-accent);
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+}
+
+.header-actions > div:not(:nth-child(1)) {
+    height: 30px;
+    width: 30px;
+}
+
+.header-actions > div:not(:nth-child(1)):hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.ide-body {
+    width: 100%;
+}
+
+
+.ide-panel-left, .ide-panel-right {
+    width: 40px;
+    background: var(--primary-bg);
+    overflow: hidden;
+    padding: 4px 0;
+}
+
+.ide-panel-left {
+    border-right: 1px solid var(--secondary-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ide-panel-right {
+    border-left: 1px solid var(--secondary-bg);
+}
+
+.ide-side {
+    background: var(--primary-bg);
+    width: 300px;
+}
+
+.ide-workspace-wrapper {
+    border-bottom: 1px solid var(--secondary-bg);
+}
+
+.ide-terminal {
+    height: 200px;
+}
+
+
+.ide-footer {
+    background: var(--primary-bg);
+    border-top: 1px solid var(--secondary-bg);
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 11px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-left span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #6f9af8;
+}
+
+.footer-right .footer-blame {
+    height: 30px;
+    padding: 0 8px;
+    cursor: default;
+}
+
+.footer-right .footer-blame:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
